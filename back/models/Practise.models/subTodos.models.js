@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const subTodoSchema = new mongoose.models({
+const subTodoSchema = new mongoose.Schema({
     content: {
         type: String,
         required: true,
@@ -14,3 +14,5 @@ const subTodoSchema = new mongoose.models({
         ref: "User",
     },
 }, { timestamps: true });
+
+export const subTodos = mongoose.model('SubTodos',subTodoSchema);

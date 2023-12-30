@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const todos = new mongoose.models({
+const todos = new mongoose.Schema({
     content : {
         type:String,
         required:true,
